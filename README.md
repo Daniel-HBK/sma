@@ -32,9 +32,7 @@ Application will be up running at http://localhost:8082
     cd secure-messaging-app
     ```
 
-2. Update .env.example PostgreSQL database connection settings
-
-3. Run the app:
+2. Run the app:
 
     ```
     bash bash/deploy.sh
@@ -56,12 +54,24 @@ Application will be up running at http://localhost:8082
 
 **Request Body:**
 
+Read once:
+
 ```json
 {
     "content": "This is a secret message",
     "recipients": ["recipient1@example.com", "recipient2@example.com"],
-    "expiry_type": "read_once",
-    "expiry_time": "2024-12-31T23:59:59Z"
+    "expiry_type": "read_once"
+}
+```
+
+Time-based:
+
+```json
+{
+    "content": "This is a secret message",
+    "recipients": ["recipient1@example.com", "recipient2@example.com"],
+    "expiry_type": "time_based",
+    "expiry_time": "2024-08-05 10:00:00"
 }
 ```
 
@@ -108,7 +118,7 @@ Application will be up running at http://localhost:8082
 
 ```json
 {
-    "identifier": "recipient@example.com",
+    "identifier": "recipient1@example.com",
     "name": "John Doe"
 }
 ```
@@ -124,6 +134,7 @@ Our application implements several security measures to protect your data:
 -   **Rate Limiting**: API endpoints are protected against abuse through rate limiting.
 -   **Input Validation**: All input is validated to prevent injection attacks.
 -   **HTTPS Enforcement**: All API communications are encrypted in transit using HTTPS.
+-   **Tech Stack Confidentiality**: The technology stack used for the application is hidden to prevent potential attackers from exploiting known vulnerabilities.
 
 ## Basic Usage
 
