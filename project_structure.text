@@ -1,0 +1,186 @@
+- .docker
+  - app
+    - docker-entrypoint.sh
+  - db
+    - .gitignore
+    - data
+    - my.cnf
+    - sql
+      - .gitignore
+  - logs
+    - .gitignore
+  - nginx
+    - default.conf
+    - nginx.conf
+  - php
+    - .bashrc
+    - Dockerfile
+    - docker.conf
+    - php.ini
+  - phpmyadmin
+    - .gitignore
+  - redis
+    - .gitignore
+- .editorconfig
+- .env
+- .env.example
+- .gitattributes
+- .gitignore
+- .phpunit.result.cache
+- ERD.png
+- README.md
+- app
+  - Console
+    - Commands
+      - V1
+        - CleanExpiredMessages.php
+  - Factories
+    - V1
+      - MessageFactory.php
+  - Http
+    - Controllers
+      - Controller.php
+      - V1
+        - MessageController.php
+        - RecipientController.php
+    - Middleware
+      - V1
+        - LanguageMiddleware.php
+    - Requests
+      - V1
+        - CreateMessageRequest.php
+        - RetrieveMessageRequest.php
+  - Models
+    - V1
+      - Message.php
+      - Recipient.php
+      - User.php
+  - Providers
+    - AppServiceProvider.php
+    - RouteServiceProvider.php
+  - Repositories
+    - V1
+      - Interfaces
+        - MessageRepositoryInterface.php
+        - RecipientRepositoryInterface.php
+      - MessageRepository.php
+      - RecipientRepository.php
+  - Services
+    - V1
+      - MessageService.php
+      - RecipientService.php
+- artisan
+- bash
+  - deploy.sh
+- bootstrap
+  - app.php
+  - cache
+    - .gitignore
+    - packages.php
+    - services.php
+  - providers.php
+- composer.json
+- composer.lock
+- config
+  - app.php
+  - auth.php
+  - cache.php
+  - database.php
+  - filesystems.php
+  - logging.php
+  - mail.php
+  - queue.php
+  - sanctum.php
+  - services.php
+  - session.php
+- database
+  - .gitignore
+  - database.sqlite
+  - factories
+    - V1
+      - MessageFactory.php
+      - RecipientFactory.php
+      - UserFactory.php
+  - migrations
+    - 0001_01_01_000000_create_users_table.php
+    - 0001_01_01_000001_create_cache_table.php
+    - 0001_01_01_000002_create_jobs_table.php
+    - 2024_08_02_173755_create_messages_recipients_and_pivot_tables.php
+    - 2024_08_02_184105_create_personal_access_tokens_table.php
+  - seeders
+    - DatabaseSeeder.php
+    - RecipientSeeder.php
+- docker-compose.yaml
+- lang
+  - en
+    - app.php
+    - auth.php
+    - pagination.php
+    - passwords.php
+    - validation.php
+  - nl
+    - app.php
+    - auth.php
+    - pagination.php
+    - passwords.php
+    - validation.php
+- mysql
+  - my.cnf
+- nginx
+  - conf.d
+- openssl.cnf
+- package.json
+- php
+  - local.ini
+- php.ini
+- phpunit.xml
+- project_structure.text
+- public
+  - .htaccess
+  - favicon.ico
+  - index.php
+  - robots.txt
+- resources
+  - css
+    - app.css
+  - js
+    - app.js
+    - bootstrap.js
+  - views
+    - welcome.blade.php
+- routes
+  - api.php
+  - api_v1.php
+  - console.php
+  - web.php
+- storage
+  - app
+    - .gitignore
+    - public
+      - .gitignore
+  - framework
+    - .gitignore
+    - cache
+      - .gitignore
+      - data
+        - .gitignore
+    - sessions
+      - .gitignore
+    - testing
+      - .gitignore
+    - views
+      - .gitignore
+  - logs
+    - .gitignore
+    - laravel.log
+- supervisord.conf
+- tests
+  - Feature
+    - API
+      - V1
+        - SecureMessagingTest.php
+    - ExampleTest.php
+  - TestCase.php
+  - Unit
+    - ExampleTest.php
+- vite.config.js
